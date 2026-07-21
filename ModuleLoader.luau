@@ -46,9 +46,9 @@ local START_FUNCTION = "start"
 
 ----------------------------------------------------------------
 
--- super fucking hacky: but theres no better way to do this
+-- self-explanatory
 function private.chkIsServer()
-	return #ServerHidden:GetChildren() > 0
+	return _SERVER
 end
 
 -- formatting mainly
