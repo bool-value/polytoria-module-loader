@@ -42,7 +42,7 @@ Paste the code from the ModuleLoader.luau file from this GitHub repository into 
 
 ### Set up the SERVER Init script
 Paste the following code into the InitServer script you should've created earlier and then save.
-``lua
+```lua
 local serverFolder = ServerHidden:WaitChild("Server")
 local ModuleLoader = require(ScriptService:WaitChild("ModuleLoader"))
 ModuleLoader.Load({
@@ -52,11 +52,11 @@ ModuleLoader.Load({
 	["logModulesLoaded"] = true,
 	["logIgnoredModules"] = true,
 })
-``
+```
 
 ### Set up the CLIENT Init script
 Paste the following code into the InitServer script you should've created earliert and then save.
-``lua
+```lua
 local clientFolder = ScriptService:WaitChild("Client")
 local ModuleLoader = require(ScriptService:WaitChild("ModuleLoader"))
 ModuleLoader.Load({
@@ -67,13 +67,13 @@ ModuleLoader.Load({
 	["logModulesLoaded"] = true,
 	["logIgnoredModules"] = true,
 })
-``
+```
 ___
 ## Usage
 Once installed, you can freely create ModuleScripts inside the respective Server and Client folders. You can further divide them up into descendant folders to group together scripts of similar function. Each script within one of the module loader's Server/Client folders can have two optional functions; "init" and "start." If you parent a ModuleScript into one of the loader's folders without these functions, it will still try to require() it, however; no functions will be called inside of the script. 
 
 ### Template ModuleScript
-``lua
+```lua
 local module = {}
 
 function module.init()
@@ -85,4 +85,8 @@ function module.start()
 end
 
 return module
-``
+```
+
+___
+
+This project is created by @BoolValue on Polytoria and is free and open source software under the MIT License.
